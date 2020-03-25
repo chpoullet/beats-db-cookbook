@@ -69,6 +69,8 @@ execute 'enable_module_syslogs' do
   command 'sudo filebeat modules enable system'
 end
 
+
+
 #execute 'setup_dasboards' do
 #  command 'sudo filebeat setup'
 #end
@@ -82,3 +84,8 @@ service 'filebeat' do
   supports status: true, restart: true, reload: true
   action [:enable, :start]
 end
+
+execute 'restart' do
+  command 'sudo systemctl restart mongodb'
+end
+
