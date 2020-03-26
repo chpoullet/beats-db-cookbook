@@ -32,9 +32,6 @@ describe 'beatsapp_cookbook::default' do
     it 'should update source list' do
       expect(chef_run).to update_apt_update('update_sources')
     end
-    it 'apt-transport-https' do
-      expect(chef_run).to install_package "apt-transport-https"
-    end
     it 'metricbeat' do
      expect(chef_run).to install_package "metricbeat"
     end
