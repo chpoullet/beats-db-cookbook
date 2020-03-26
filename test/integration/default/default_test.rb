@@ -19,6 +19,6 @@ describe package('metricbeat') do
   it { should be_installed }
 end
 
-describe service "filebeat" do
+describe package('filebeat') do
   it { should be_installed }
 end
