@@ -20,14 +20,6 @@ describe 'beatsapp_cookbook::default' do
       expect(chef_run).to update_apt_update('update_sources')
     end
     
-    it 'metricbeat' do
-     expect(chef_run).to install_package "metricbeat"
-    end
-    
-    it 'filebeat' do
-     expect(chef_run).to install_package "filebeat"
-    end
-    
     it 'should create a metricbeat template in etc/metricbeat/metricbeat.yml' do
       expect(chef_run).to create_template('etc/metricbeat/metricbeat.yml')
     end
