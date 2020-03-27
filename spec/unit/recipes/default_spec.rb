@@ -28,12 +28,12 @@ describe 'beatsapp_cookbook::default' do
      expect(chef_run).to install_package "filebeat"
     end
     
-    it 'should create a metricbeat template in /etc/metricbeat/metricbeat.yml' do
-      expect(chef_run).to create_template('/etc/metricbeat/metricbeat.yml')
+    it 'should create a metricbeat template in etc/metricbeat/metricbeat.yml' do
+      expect(chef_run).to create_template('etc/metricbeat/metricbeat.yml')
     end
     
-    it 'should create a filebeat template in /etc/filebeat/filebeat.yml' do
-      expect(chef_run).to create_template('/etc/filebeat/filebeat.yml')
+    it 'should create a filebeat template in etc/filebeat/filebeat.yml' do
+      expect(chef_run).to create_template('etc/filebeat/filebeat.yml')
     end
   end
 end
